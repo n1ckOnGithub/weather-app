@@ -1,0 +1,42 @@
+.weatherInfo{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 10px;
+  margin-top: 20px;
+  border: 1px solid #000;
+  background-color: #DBEBEB;
+  border-radius: 5px;
+  box-shadow: 5px 10px 20px 10px rgba(0,0,0,0.35);
+}
+
+span.temperature{
+  font-size: 2em;
+  font-weight: 700;
+}
+
+#icon{
+  font-size: 200px;
+  width: 100%;
+  text-align: center;
+}
+
+.searchWrapper{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  gap: 5px;
+  border: 1px solid transparent;
+}
+
+.searchWrapper button, .searchWrapper input{
+  display: flex;
+  padding: 5px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+.searchWrapper button{
+  background-color: #fff;
+  cursor: pointer;
+}
