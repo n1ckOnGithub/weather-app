@@ -6,8 +6,9 @@
   margin-top: 20px;
   border: 1px solid #000;
   background-color: #a786ea;
-  border-radius: 5px;
+  border-radius: 8px;
   box-shadow: 5px 10px 20px 10px rgba(0,0,0,0.35);
+  animation: bounce 1s ease-in-out;
 }
 
 span.temperature{
@@ -26,17 +27,39 @@ span.temperature{
   justify-content: center;
   padding: 10px;
   gap: 5px;
-  border: 1px solid transparent;
+  border: none;
 }
 
 .searchWrapper button, .searchWrapper input{
   display: flex;
   padding: 5px;
-  border: 1px solid transparent;
-  border-radius: 5px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+.searchWrapper input{
+  text-transform: capitalize;
 }
 
 .searchWrapper button{
   background-color: #fff;
   cursor: pointer;
+}
+
+.searchWrapper button:hover{
+  transform: scale(1.2);
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0); /* Bouncing starts and ends at the original position */
+  }
+  40% {
+    transform: translateY(-20px); /* Bouncing up */
+  }
+  60% {
+    transform: translateY(-10px); /* Bouncing down */
+  }
 }

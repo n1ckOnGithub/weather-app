@@ -48,9 +48,16 @@ const Weatherdetails = () => {
             placeholder="Enter city"
             onChange={(e) => setcityName(e.target.value)}
             spellCheck="false"
+            onKeyDown={(e)=>{
+              if (e.key === "Enter"){
+                getWeather();
+              }
+            }}
           />
-          <button onClick={getWeather}>
-            <span class="material-symbols-rounded">search</span>
+          <button 
+            onClick={getWeather}
+            className="material-symbols-rounded">
+            search
           </button>
         </div>
         <WeatherInfo {...weatherObj} />

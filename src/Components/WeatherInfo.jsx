@@ -1,9 +1,9 @@
 import React from 'react'
 
 const WeatherInfo = ({weather,name,temperature,country,humidity,windSpeed,iconType}) => {
-
      
        if (iconType) {
+
          switch (iconType) {
            case "Clouds":
              iconType = "cloud";
@@ -31,22 +31,22 @@ const WeatherInfo = ({weather,name,temperature,country,humidity,windSpeed,iconTy
        }
 
   return (
-    weather &&
-    <>
-      <div className="weatherInfo">
-        <h1 className="location">
-          {name}, {country}.
-        </h1>
-        <h3 className='description'>{weather}</h3>
-        <span className="temperature">{temperature}°C</span>
-        <span id="icon" className="material-symbols-rounded">
-          {iconType}
-        </span>
-        <h4 className='humidity'>Humidity:{humidity}%</h4>
-        <h4 className='windSpeed'>Wind speed: {windSpeed} km/h</h4>
-
-      </div>
-    </>
+    weather && (
+      <>
+        <div className="weatherInfo">
+          <h1 className="location">
+            {name}, {country}.
+          </h1>
+          <h3 className="description">{weather}</h3>
+          <span className="temperature">{temperature}°C</span>
+          <span id="icon" className="material-symbols-rounded">
+            {iconType}
+          </span>
+          <h4 className="humidity">Humidity: {humidity}%</h4>
+          <h4 className="windSpeed">Wind speed: {windSpeed} km/h</h4>
+        </div>
+      </>
+    )
   );
 }
 
